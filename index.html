@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>js prct1</title>
+</head>
+<body>
+    <script>
+        let inputNum = prompt('Введите число от 1 до 10:', '');
+
+        function factorial(inputNum){
+            if (+inputNum < 11){
+                let fact=1;
+                for (i=1; i<= inputNum; i++ ){
+                    fact*=i;
+                }
+                return alert(fact);
+            }
+            else {
+                return alert('Введено число не из заданного диапазона')
+            } 
+        }
+        factorial(inputNum);
+    </script>
+
+</body>
+</html>
