@@ -14,10 +14,10 @@
                 for (i=1; i<= inputNum; i++ ){
                     fact*=i;
                 }
-               return callback(inputNum,fact);
+                return callback(inputNum,fact);
             }
             else {
-               return alert('Введено число не из заданного диапазона');
+                alert('Введено число не из заданного диапазона');
             } 
         }
         alert (factorial(inputNum,function(num,factor){
