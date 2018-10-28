@@ -6,21 +6,24 @@
 </head>
 <body>
     <script>
-        let inputNum = prompt('Введите число от 1 до 10:', '');
+       let inputNum = prompt('Введите число от 1 до 10:', '');
 
-        function factorial(inputNum){
+        function factorial(inputNum, callback){
             if (+inputNum < 11){
                 let fact=1;
                 for (i=1; i<= inputNum; i++ ){
                     fact*=i;
                 }
-                return alert(fact);
+               return callback(inputNum,fact);
             }
             else {
-                return alert('Введено число не из заданного диапазона')
+               return alert('Введено число не из заданного диапазона');
             } 
         }
-        factorial(inputNum);
+        alert (factorial(inputNum,function(inputNum,fact){
+            return `Факториал числа ${inputNum} = ${fact}`
+        }));
+        
     </script>
 
 </body>
